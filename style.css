@@ -42,6 +42,37 @@ h1 {
   background: rgba(153, 173, 242, 1);
   margin: 0 auto;
 }
+.copy {
+  display: flex;
+  width: 500px;
+  min-height: 50px;
+  background: #ccc;
+  margin: 64px auto 0 auto;
+  text-align: center;
+}
+.copy__text {
+  position: relative;
+  flex-basis: 75%;
+  color: #828282;
+  padding: 1rem 0.5rem;
+  font-size: 0.95rem;
+  text-align: left;
+}
+.copy__button {
+  flex-basis: 25%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  background: #5174F4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.copy__button:hover {
+  background: #51a5f4;
+}
 
 .preview__input__container {
   position: absolute;
@@ -99,7 +130,7 @@ h1 {
 
 .preview__input {
   position: absolute;
-  width: 50px;
+  width: 80px;
   height: 25px;
   background: transparent;
   text-align: center;
@@ -118,9 +149,9 @@ h1 {
 }
 .preview__input--top-left-left {
   height: 50px;
-  width: 50px;
+  width: 80px;
   top: 10px;
-  left: -55px;
+  left: -85px;
   border-bottom: none;
   border-right: 1px solid rgb(146, 146, 146);
   text-align: right;
@@ -137,9 +168,9 @@ h1 {
 }
 .preview__input--bottom-left-left {
   height: 50px;
-  width: 50px;
+  width: 80px;
   bottom: 10px;
-  left: -55px;
+  left: -85px;
   border-bottom: none;
   border-right: 1px solid rgb(146, 146, 146);
   text-align: right;
@@ -156,9 +187,9 @@ h1 {
 }
 .preview__input--top-right-right {
   height: 50px;
-  width: 50px;
+  width: 80px;
   top: 10px;
-  right: -55px;
+  right: -85px;
   border-bottom: none;
   border-left: 1px solid rgb(146, 146, 146);
   text-align: left;
@@ -176,12 +207,32 @@ h1 {
 }
 .preview__input--bottom-right-right {
   height: 50px;
-  width: 50px;
+  width: 80px;
   bottom: 10px;
-  right: -55px;
+  right: -85px;
   border-bottom: none;
   border-left: 1px solid rgb(146, 146, 146);
   text-align: left;
   padding-bottom: 0;
   padding-left: 0.25rem;
+}
+
+
+.error {
+  border-color: red;
+}
+
+.github {
+  display: flex;
+  width: 500px;
+  margin: 64px auto 0 auto;
+  align-items: center;
+}
+
+.github__link {
+  margin-left: 1rem;
+  color: rgb(23, 45, 131);
+}
+.github__link:active, .github__link:visited {
+  color: color: rgb(23, 45, 131);
 }

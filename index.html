@@ -16,8 +16,8 @@
             <div class="preview" id="preview">
                 <form id="previewForm">
                     <div data-border-container="TopLeft">
-                        <input type="text" class="preview__input preview__input--top-left-right" data-border="horizontal">
-                        <input type="text" class="preview__input preview__input--top-left-left" data-border="vertical">
+                        <input type="text" class="preview__input preview__input--top-left-right" data-border="horizontal" placeholder="25px">
+                        <input type="text" class="preview__input preview__input--top-left-left" data-border="vertical" placeholder="50rem">
                     </div>
 
                     <div data-border-container="BottomLeft">
@@ -36,6 +36,28 @@
                         <input type="text" class="preview__input preview__input--bottom-right-right" data-border="vertical">
                     </div>
                 </form>
+            </div>
+
+            <div class="copy">
+                <span class="copy__text">border-radius:
+                    <span id="TopLeft-horizontal">0</span>
+                    <span id="TopLeft-vertical">0</span>
+
+                    <span id="TopRight-horizontal">0</span>
+                    <span id="TopRight-vertical">0</span>
+
+                    <span id="BottomRight-horizontal">0</span>
+                    <span id="BottomRight-vertical">0</span>
+
+                    <span id="BottomLeft-horizontal">0</span>
+                    <span id="BottomLeft-vertical">0</span>;
+                </span>
+                <button class="copy__button" id="copy">Copy</button>
+            </div>
+
+            <div class="github">
+                <img src="./github-logo.png" />
+                <a href="https://github.com/AmishBaztard/Border-Radius" class="github__link">https://github.com/AmishBaztard/Border-Radius</a>
             </div>
         </main>
     </div>
