@@ -60,7 +60,7 @@ copyButton.addEventListener('click', (e) => {
   newElem.style.top = copyRect.height + (newElem.clientHeight/2) + "px";
   newElem.style.left = (copyRect.width / 2) - (newElem.clientWidth / 2) + "px";
 
-  setTimeout(() => { newElem.style.opacity = 0; newElem.remove(); }, 1500);
+  setTimeout(() => { newElem.style.opacity = 0; setTimeout(() => { newElem.remove(); }, 1000); }, 1500);
 
   e.preventDefault();
 });
