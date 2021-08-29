@@ -98,15 +98,90 @@ h1 {
 
 
 .preview__input {
+  position: absolute;
   width: 50px;
   height: 25px;
+  background: transparent;
   text-align: center;
   font-size: 1.25rem;
-  color:rgb(102, 102, 102);
+  color:#fff;
   border: none;
-  border-radius: 4px;
 }
 .preview__input:focus {
-  border: none;
   outline: none;
+}
+
+.preview__input--top-left-right {
+  top: -30px;
+  border-bottom: 1px solid rgb(146, 146, 146);
+  padding-bottom: 0.25rem;
+}
+.preview__input--top-left-left {
+  height: 50px;
+  width: 50px;
+  top: 10px;
+  left: -55px;
+  border-bottom: none;
+  border-right: 1px solid rgb(146, 146, 146);
+  text-align: right;
+  padding-bottom: 0;
+  padding-right: 0.25rem;
+}
+
+.preview__input--bottom-left-right {
+  bottom: -30px;
+  border-bottom: none;
+  border-top: 1px solid rgb(146, 146, 146);
+  padding: none;
+  padding-top: 0.25rem;
+}
+.preview__input--bottom-left-left {
+  height: 50px;
+  width: 50px;
+  bottom: 10px;
+  left: -55px;
+  border-bottom: none;
+  border-right: 1px solid rgb(146, 146, 146);
+  text-align: right;
+  padding-bottom: 0;
+  padding-right: 0.25rem;
+}
+
+
+.preview__input--top-right-left {
+  top: -30px;
+  right: 0;
+  border-bottom: 1px solid rgb(146, 146, 146);
+  padding-bottom: 0.25rem;
+}
+.preview__input--top-right-right {
+  height: 50px;
+  width: 50px;
+  top: 10px;
+  right: -55px;
+  border-bottom: none;
+  border-left: 1px solid rgb(146, 146, 146);
+  text-align: left;
+  padding-bottom: 0;
+  padding-left: 0.25rem;
+}
+
+.preview__input--bottom-right-left {
+  bottom: -30px;
+  right: 0;
+  border-bottom: none;
+  border-top: 1px solid rgb(146, 146, 146);
+  padding: none;
+  padding-top: 0.25rem;
+}
+.preview__input--bottom-right-right {
+  height: 50px;
+  width: 50px;
+  bottom: 10px;
+  right: -55px;
+  border-bottom: none;
+  border-left: 1px solid rgb(146, 146, 146);
+  text-align: left;
+  padding-bottom: 0;
+  padding-left: 0.25rem;
 }

@@ -15,21 +15,26 @@
         <main class="content">
             <div class="preview" id="preview">
                 <form id="previewForm">
-                <div class="preview__input__container border border--top-left">
-                    <input type="text" class="preview__input" data-border="TopLeft" />
-                </div>
+                    <div data-border-container="TopLeft">
+                        <input type="text" class="preview__input preview__input--top-left-right" data-border="horizontal">
+                        <input type="text" class="preview__input preview__input--top-left-left" data-border="vertical">
+                    </div>
 
-                <div class="preview__input__container border border--top-right">
-                    <input type="text" class="preview__input" data-border="TopRight" />
-                </div>
+                    <div data-border-container="BottomLeft">
+                        <input type="text" class="preview__input preview__input--bottom-left-right" data-border="horizontal">
+                        <input type="text" class="preview__input preview__input--bottom-left-left" data-border="vertical">
+                    </div>
 
-                <div class="preview__input__container border border--bottom-left">
-                    <input type="text" class="preview__input" data-border="BottomLeft" />
-                </div>
 
-                <div class="preview__input__container border border--bottom-right">
-                    <input type="text" class="preview__input" data-border="BottomRight" />
-                </div>
+                    <div data-border-container="TopRight">
+                        <input type="text" class="preview__input preview__input--top-right-left" data-border="horizontal">
+                        <input type="text" class="preview__input preview__input--top-right-right" data-border="vertical">
+                    </div>
+                    
+                    <div data-border-container="BottomRight">
+                        <input type="text" class="preview__input preview__input--bottom-right-left" data-border="horizontal">
+                        <input type="text" class="preview__input preview__input--bottom-right-right" data-border="vertical">
+                    </div>
                 </form>
             </div>
         </main>
