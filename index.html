@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius Preview</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Border Radius Preview</h1>
+        </header>
+        <main class="content">
+            <div class="preview" id="preview">
+                <form id="previewForm">
+                <div class="preview__input__container border border--top-left">
+                    <input type="text" class="preview__input" data-border="TopLeft" />
+                </div>
+
+                <div class="preview__input__container border border--top-right">
+                    <input type="text" class="preview__input" data-border="TopRight" />
+                </div>
+
+                <div class="preview__input__container border border--bottom-left">
+                    <input type="text" class="preview__input" data-border="BottomLeft" />
+                </div>
+
+                <div class="preview__input__container border border--bottom-right">
+                    <input type="text" class="preview__input" data-border="BottomRight" />
+                </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

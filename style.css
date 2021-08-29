@@ -1,0 +1,112 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+/* =============================
+GLOBAL SETUP
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Montserrat";
+  background: rgba(72, 81, 115, 1);
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+
+.container {
+  margin: 0 auto;
+}
+.header {
+  margin: 164px 0 0 0;
+  text-align: center;
+}
+.content {
+  margin: 138px 0 0 0;
+}
+.preview {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  background: rgba(153, 173, 242, 1);
+  margin: 0 auto;
+}
+
+.preview__input__container {
+  position: absolute;
+}
+.border {}
+.border::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+}
+
+
+.border--top-left {
+  top: -42px;
+  left: -67px;
+}
+.border--top-left::after {
+  top: 104%;
+  left: 104%;
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0) calc(50% - 1px), #fff, rgba(255, 255, 255, 0) calc(50% + 1px));
+}
+
+.border--top-right {
+  top: -42px;
+  right: -67px;
+}
+.border--top-right::after {
+  top: 104%;
+  right: 104%;
+  background: linear-gradient(to top left, rgba(255, 255, 255, 0) calc(50% - 1px), #fff, rgba(255, 255, 255, 0) calc(50% + 1px));
+}
+
+.border--bottom-left {
+  bottom: -42px;
+  left: -67px;
+}
+.border--bottom-left::after {
+  bottom: 104%;
+  left: 104%;
+  background: linear-gradient(to top left, rgba(255, 255, 255, 0) calc(50% - 1px), #fff, rgba(255, 255, 255, 0) calc(50% + 1px));
+}
+
+.border--bottom-right {
+  bottom: -42px;
+  right: -67px;
+}
+.border--bottom-right::after {
+  bottom: 104%;
+  right: 104%;
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0) calc(50% - 1px), #fff, rgba(255, 255, 255, 0) calc(50% + 1px));
+}
+
+
+
+.preview__input {
+  width: 50px;
+  height: 25px;
+  text-align: center;
+  font-size: 1.25rem;
+  color:rgb(102, 102, 102);
+  border: none;
+  border-radius: 4px;
+}
+.preview__input:focus {
+  border: none;
+  outline: none;
+}
