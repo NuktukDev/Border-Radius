@@ -4,21 +4,19 @@ const previewForm = document.querySelector("#previewForm");
 const copy = document.querySelector(".copy__text");
 const copyButton = document.querySelector("#copy");
 
-previewForm.addEventListener('focusin', (e) => {
-  if(!e.target.dataset.border) return;
+previewForm.addEventListener('focusin', ({ target }) => {
+  if(!target.dataset.border) return;
 
-  let borderElement = e.target;
-  let borderContainer = borderElement.closest('[data-border-container]');
+  const borderContainer = target.closest('[data-border-container]');
   if(!borderContainer) return;
 
-  borderElement.addEventListener('input', (e) => {
-    let val = e.target.value;
-    if (!/\d+(px|em|rem|%){1}/g.test(val) && val) {
-      e.target.classList.add('error');
+  target.addEventListener('input', ({ target }) => {
+    if (!/\d+(px|em|rem|%){1}/g.test(target.value) && target.value) {
+      target.classList.add('error');
       return;
     }
-    e.target.classList.remove('error');
-    let borderRadius = { horizontal: 0, vertical: 0 };
+    target.classList.remove('error');
+    const borderRadius = { horizontal: 0, vertical: 0 };
 
     let childrenInputs = borderContainer.querySelectorAll('[data-border]');
     for(let child of childrenInputs) {
@@ -31,23 +29,23 @@ previewForm.addEventListener('focusin', (e) => {
           break;
       }
     }
-
-    preview.style['border'+borderContainer.dataset.borderContainer+'Radius'] = `${borderRadius.horizontal} ${borderRadius.vertical}`;
+    const radiusLocation = borderContainer.dataset.borderContainer; // TopLeft, TopRight, BottomLeft, or BottomRight
+    preview.style[`border${radiusLocation}Radius`] = `${borderRadius.horizontal} ${borderRadius.vertical}`;
     
-    copy.querySelector('#' + borderContainer.dataset.borderContainer + '-horizontal').textContent = borderRadius.horizontal;
-    copy.querySelector('#' + borderContainer.dataset.borderContainer + '-vertical').textContent = borderRadius.vertical;
+    copy.querySelector(`#${radiusLocation}-horizontal`).textContent = borderRadius.horizontal;
+    copy.querySelector(`#${radiusLocation}-vertical`).textContent = borderRadius.vertical;
   });
 });
 
 copyButton.addEventListener('click', (e) => {
-  let r = document.createRange();
+  const r = document.createRange();
   r.selectNode(copy);
   window.getSelection().removeAllRanges();
   window.getSelection().addRange(r);
   document.execCommand('copy');
   window.getSelection().removeAllRanges();
 
-  let newElem = document.createElement('div');
+  const newElem = document.createElement('div');
   newElem.style.position = "absolute";
   newElem.innerText = "Copied to clipboard!";
   newElem.style.whiteSpace = "nowrap";
@@ -56,7 +54,7 @@ copyButton.addEventListener('click', (e) => {
   newElem.style.transition = "1s opacity";
   copy.append(newElem);
 
-  let copyRect = document.querySelector(".copy").getBoundingClientRect();
+  const copyRect = document.querySelector(".copy").getBoundingClientRect();
   newElem.style.top = copyRect.height + (newElem.clientHeight/2) + "px";
   newElem.style.left = (copyRect.width / 2) - (newElem.clientWidth / 2) + "px";
 
